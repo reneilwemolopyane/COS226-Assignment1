@@ -51,12 +51,26 @@ public class Runner
     /*Defines the behaviour of an individual bidder. Note you have to decide how to incorporate your lock.*/
     public void bidder(int bidderId) 
     {
-       
+       for(int i = 0; i < iterations; i++){
+        lock.lock();
+        try{
+            double currentHighest = auction.getHighestBid();
+            double newBid = currentHighest + 1.0;
+            auction.placeBid(bidderId, newBid);
+        }
+        finally{
+            lock.unlock();
+        }
+       }
     }
 
     /*Optional Helper: Records and reports the results of the experiment.*/
     public void reportResults(long executionTime) 
     {
-
+        System.out.println("Execution time(ms): " + executionTime / 1_000_000.0);
+        System.out.println("Item:" + auction.getItemName());
+        System.out.println("Final highest bid: " + auction.getHighestBid());
+        System.out.println("Final highest bidder: " + auction.getHighestBidder());
+        System.out.println("Expected total bids: " + ((long) number of threads * iterations));
     }
 }
