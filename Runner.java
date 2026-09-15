@@ -133,7 +133,8 @@ public class Runner
     }
 
     // Average time (ns) a thread spent blocked in lock.lock() before it returned,
-    // across every successful bid -- this is the "additional measurement"
+    // across every successful bid 
+    // this is the "additional measurement"
     public double getAverageWaitNanos()
     {
         long bids = totalBids.get();
