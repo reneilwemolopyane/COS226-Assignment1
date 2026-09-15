@@ -1,0 +1,24 @@
+2 bidder threads (40000 expected bids)
+Lock    Mean exec(ms)  Total bids placed  Final highest bid  Mean wait(ns)      Bids won/bidder
+TTAS             15.9              40000              40000          424.1      20000 (uniform)
+CLH              22.0              40000              40000          588.5      20000 (uniform)
+MCS              14.7              40000              40000          400.4      20000 (uniform)
+
+4 bidder threads (80000 expected bids)
+Lock    Mean exec(ms)  Total bids placed  Final highest bid  Mean wait(ns)      Bids won/bidder
+TTAS             23.4              80000              80000          907.1      20000 (uniform)
+CLH              24.9              80000              80000         1004.5      20000 (uniform)
+MCS              25.8              80000              80000         1039.3      20000 (uniform)
+
+8 bidder threads (160000 expected bids)
+Lock    Mean exec(ms)  Total bids placed  Final highest bid  Mean wait(ns)      Bids won/bidder
+TTAS             50.2             160000             160000         2030.9      20000 (uniform)
+CLH              56.2             160000             160000         2540.0      20000 (uniform)
+MCS              58.7             160000             160000         2654.6      20000 (uniform)
+
+16 bidder threads (320000 expected bids)
+Lock    Mean exec(ms)  Total bids placed  Final highest bid  Mean wait(ns)      Bids won/bidder
+TTAS            130.0             320000             320000         5506.5      20000 (uniform)
+CLH             131.0             320000             320000         6212.0      20000 (uniform)
+MCS             136.2             320000             320000         6493.5      20000 (uniform)
+
