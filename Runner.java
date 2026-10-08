@@ -71,6 +71,6 @@ public class Runner
         System.out.println("Item:" + auction.getItemName());
         System.out.println("Final highest bid: " + auction.getHighestBid());
         System.out.println("Final highest bidder: " + auction.getHighestBidder());
-        System.out.println("Expected total bids: " + ((long) number of threads * iterations));
+        System.out.println("Expected total bids: " + ((long) numberOfThreads * iterations));
     }
 }
